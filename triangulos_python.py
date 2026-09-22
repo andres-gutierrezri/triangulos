@@ -57,7 +57,9 @@ if __name__ == "__main__":
             print("Por favor, ingrese lados válidos.")
 
         # Preguntar al usuario si desea continuar
+        # Unicamente se aceptará 's' para continuar, cualquier otra entrada terminará el programa
         continuar = input("¿Desea ingresar otro triángulo? (s/n): ").strip().lower()
+        print("Unicamente se aceptará 's' para continuar, cualquier otra entrada terminará el programa.")
         if continuar != 's':
             print("Gracias por usar el programa. ¡Hasta luego!")
             break
