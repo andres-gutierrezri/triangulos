@@ -44,10 +44,21 @@ def mostrar_resultado(lado1, lado2, lado3) -> str:
 # Función principal if __name__ == "__main__":
 # Determinar y mostrar el tipo de triángulo
 if __name__ == "__main__":
-    lado1, lado2, lado3 = ingresar_lados()
-    validar = validar_lados(lado1, lado2, lado3)
-    if validar:
-        mostrar_resultado(lado1, lado2, lado3)
-    else:
-        print("Por favor, ingrese lados válidos para determinar el tipo de triángulo.")
+    # Menu principal para el programa
+    while True:
+        # Solicitar al usuario que ingrese los lados del triángulo
+        print("\n--- Determinador de Tipo de Triángulo ---")
+        lados = ingresar_lados()
+        
+        # Validar los lados ingresados y mostrar el resultado
+        if validar_lados(*lados):
+            mostrar_resultado(*lados)
+        else:
+            print("Por favor, ingrese lados válidos.")
+
+        # Preguntar al usuario si desea continuar
+        continuar = input("¿Desea ingresar otro triángulo? (s/n): ").strip().lower()
+        if continuar != 's':
+            print("Gracias por usar el programa. ¡Hasta luego!")
+            break
 
