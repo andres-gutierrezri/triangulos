@@ -30,7 +30,7 @@ def ingresar_lados() -> tuple:
 # Función para validar que los lados ingresados sean positivos
 def validar_lados(lado1, lado2, lado3) -> bool:
     if lado1 <= 0 or lado2 <= 0 or lado3 <= 0:
-        print("Los lados deben ser números positivos.")
+        print("Los lados deben ser números positivos mayores que cero.")
         return False
     return True
 
